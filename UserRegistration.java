@@ -13,15 +13,31 @@ public class UserRegistration {
 		Pattern pattern = Pattern.compile("[A-Z]{1}[a-z]{2,}$");
 		Matcher match = pattern.matcher(entry); 
 		boolean patternValidity = match.matches();
-		if (patternValidity == true) {
-			System.out.println("your Entry is Valid");	
-		}
-		else {
-			System.out.println("Your Entry is Invalid");
-		}
+			if (patternValidity == true) {
+				System.out.println("your Entry is Valid");	
+			}
+			else {
+				System.out.println("Your Entry is Invalid");
+			}
+	}
+	
+	public static void lastName() {
+		System.out.println("Enter Last Name");
+		Scanner input = new Scanner(System.in);
+		String entry = input.nextLine();
+		Pattern pattern = Pattern.compile("[A-Z]{1}[a-z]{2,}$");
+		Matcher match = pattern.matcher(entry); 
+		boolean patternValidity = match.matches();
+			if (patternValidity == true) {
+				System.out.println("your Entry is Valid");	
+			}
+			else {
+				System.out.println("Your Entry is Invalid");
+			}
 	}
 		
 	public static void main(String args[]) {
 		firstName();
+		lastName();
 		}
 }
